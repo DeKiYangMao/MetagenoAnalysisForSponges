@@ -7,7 +7,7 @@ import xlrd
 from bs4 import BeautifulSoup
 
 
-o_dir ='F:\\sponge metagenome binning data\\18X sponoge MG data'#海绵Bin文件夹
+o_dir =''#海绵Bin文件夹
 list = os.listdir(o_dir)
 
 for i in range(0, len(list)):#遍历各海绵样品文件夹
@@ -30,7 +30,7 @@ for i in range(0, len(list)):#遍历各海绵样品文件夹
             n = n + 1
             f_sheet.write(n, 0, str(item))
 
-            contig = xlrd.open_workbook('C:\\Users\\AMao\\Desktop\\contig.xls')  # 抓取该bin组装序列总长度
+            contig = xlrd.open_workbook('')  # 抓取该bin组装序列总长度
             contig_sheet = contig.sheet_by_name("contig")
             len_c = contig_sheet.nrows
             for cn in range(len_c):
@@ -39,7 +39,7 @@ for i in range(0, len(list)):#遍历各海绵样品文件夹
                     contig_len = rowc[2]
                     f_sheet.write(n, 2, contig_len)
 
-            phylum = xlrd.open_workbook('C:\\Users\\AMao\\Desktop\\phylum.xls')  # 抓取该Bin鉴定所属门类（这个表基于物种注释表把纲级别以下删掉了）
+            phylum = xlrd.open_workbook('')  # 抓取该Bin鉴定所属门类（这个表基于物种注释表把纲级别以下删掉了）
             phylum_sheet = phylum.sheet_by_name("phylum")
             len_p = phylum_sheet.nrows
             for pn in range(len_p):
@@ -77,7 +77,7 @@ for i in range(0, len(list)):#遍历各海绵样品文件夹
                 except:
                     bgc_sum[row0[k]] = 0
 
-    f.save('C:\\Users\\AMao\\Desktop\\' + spongeID + '\\Bins.xls')
+    f.save('')
 
 
 
