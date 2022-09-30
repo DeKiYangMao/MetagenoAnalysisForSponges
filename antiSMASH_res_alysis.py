@@ -63,7 +63,7 @@ def write_sheet_withDIC(sheet_path, dic):
     f.save(sheet_path)
     return
 
-o_dir =''#海绵Bin文件夹
+o_dir =input（'path of the dir saved all antisamsh_res of bins:')
 list = os.listdir(o_dir)
 bin_info = {}
 for i in range(0, len(list)):#遍历各海绵样品文件夹
