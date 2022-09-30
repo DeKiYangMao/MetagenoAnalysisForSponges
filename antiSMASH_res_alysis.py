@@ -1,3 +1,8 @@
+#There are certain requirements for the structure of the antismash result folder: 
+#a three-layer folder needs to be set up, and the sample folder (the object of metagenomic sequencing) is placed under the initial folder; 
+#each bin-file named after the name of MAGs is placed under the sample folder; 
+#finally the antismash results for the MAG are stored under the bin-folder.
+
 from bs4 import BeautifulSoup
 import os
 import xlwt
