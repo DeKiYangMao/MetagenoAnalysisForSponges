@@ -1,10 +1,10 @@
-##This program is designed to compare the mass spectrum data from the sample and the standard library,count the number of hits and record thier id.
+This program is designed to compare the mass spectrum data from the sample and the standard library,count the number of hits and record thier id.
 
-##Usage: python3 mass_data_align.py <input .xls file> <output_path>
+Usage: python3 mass_data_align.py <input .xls file> <output_path>
 
-##My inputfile is 'mass_data.xls', which is uploaded to this folder, and results is stored in 'res' folder.
+My inputfile is 'mass_data.xls', which is uploaded to this folder, and results is stored in 'res' folder.
 
-##Some notice about inputfile:
+Some notice about inputfile:
 
 1.There can be many sheet within one .xls file but the last two tables in the .xls file of the mass spectrometry data must be named "database" and "control". The "database" table is the database data we want to compare with samples', and the "control" table is the blank control group data in the mass spectrometry detection process.
 
@@ -18,4 +18,4 @@
 
 6.For all sheets, data in the first row will be discarded.
 
-##Written by: Deqiang AMao :)
+Written by: Deqiang AMao :)
