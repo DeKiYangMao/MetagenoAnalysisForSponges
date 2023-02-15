@@ -3,8 +3,8 @@
 import xlwt
 import xlrd
 
-path = 'C:\\Users\\AMao\\Desktop\\'#操作文件文件夹的绝对路径
-filename = 'sha2l_sum.xlsx'#操作文件文件名
+path = ''#操作文件文件夹的绝对路径
+filename = 'depl_sum.xlsx'#操作文件文件名
 rf = xlrd.open_workbook(path + filename)
 rf_sheet = rf.sheet_by_index(0)
 nrows = rf_sheet.nrows
@@ -32,4 +32,4 @@ for i in range(1, ncols):
         f_sheet.write(r, i, r_abundance)
         r += 1
 
-f.save(path+'sha2l_ab.xlsx')#保存文件名
+f.save(path+'depl_ab.xlsx')#保存文件名
