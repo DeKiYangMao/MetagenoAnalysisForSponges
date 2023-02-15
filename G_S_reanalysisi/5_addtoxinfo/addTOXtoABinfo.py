@@ -2,9 +2,9 @@
 import xlwt
 import xlrd
 
-path = 'C:\\Users\\AMao\\Desktop\\'
+path = ''
 
-s_d = xlrd.open_workbook(path + 'sha2l_nzero.xlsx')#需要被添加注释信息的表
+s_d = xlrd.open_workbook(path + 'depl_nzero.xlsx')#需要被添加注释信息的表
 s_dsheet = s_d.sheet_by_index(0)
 nrows = s_dsheet.nrows
 
@@ -28,4 +28,4 @@ for k in range(0, nrows):
     for cell in row_v:
         f_sheet.write(k, c, cell)
         c += 1
-f.save(path + 'sha2l_tox.xlsx')
+f.save(path + 'depl_tox.xlsx')
