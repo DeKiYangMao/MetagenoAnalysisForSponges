@@ -4,14 +4,14 @@
 import xlwt
 import xlrd
 
-path = 'C:\\Users\\AMao\\Desktop\\'#“索引表”和“母表”所处的文件夹的绝对路径
+path = ''#“索引表”和“母表”所处的文件夹的绝对路径
 
 otus = xlrd.open_workbook(path + 'otus_for_spgs.xlsx')#母表
 otusheet = otus.sheet_by_index(0)
 ncols = otusheet.ncols
 nrows = otusheet.nrows
 print('outsheet_open done!')
-q_key = xlrd.open_workbook(path + 'sl2.xlsx')#索引表
+q_key = xlrd.open_workbook(path + 'dl.xlsx')#索引表
 q_sheet = q_key.sheet_by_index(0)
 qrows = q_sheet.nrows
 print('querysheet_open done!')
@@ -47,4 +47,4 @@ for r0 in row0:
         print(str(r0) + 'done!')
 
 
-f.save(path+'sha2_otu.xlsx')#结果表的绝对路径
+f.save(path+'dep_otu.xlsx')#结果表的绝对路径
