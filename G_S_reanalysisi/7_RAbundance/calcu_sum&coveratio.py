@@ -3,11 +3,11 @@
 import xlwt
 import xlrd
 
-path = 'C:\\Users\\AMao\\Desktop\\'#添加统计表格的绝对路径
+path = ''#添加统计表格的绝对路径
 f = xlwt.Workbook()
 f_sheet: object = f.add_sheet('sheet1', cell_overwrite_ok=True)
 
-info_b = xlrd.open_workbook(path+'sha2l_ab.xlsx')#添加统计表格的文件名
+info_b = xlrd.open_workbook(path+'depl_ab.xlsx')#添加统计表格的文件名
 info_sheet = info_b.sheet_by_index(0)
 nrow = info_sheet.nrows
 ncol = info_sheet.ncols
@@ -43,7 +43,7 @@ for tox in tox_dir:
     f_sheet.write(n, 2, tox_dir[tox][sample_num+1])
     n += 1
 
-f.save(path+'sha2l_coveratio.xlsx')#保存文件名
+f.save(path+'depl_coveratio.xlsx')#保存文件名
 
 
 
