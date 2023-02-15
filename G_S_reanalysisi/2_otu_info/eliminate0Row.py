@@ -1,9 +1,9 @@
 import xlwt
 import xlrd
 
-path = 'C:\\Users\\AMao\\Desktop\\'
+path = ''
 
-s_d = xlrd.open_workbook(path + 'sha2_otu.xlsx')
+s_d = xlrd.open_workbook(path + 'dep_otu.xlsx')
 s_dsheet = s_d.sheet_by_index(0)
 nrows = s_dsheet.nrows
 ncols = s_dsheet.ncols
@@ -29,4 +29,4 @@ for k in range(nrows):
             f_sheet.write(row_n, z, rowi[z])
         row_n = row_n + 1
 
-f.save(path + 'sha2l_nzero.xlsx')
+f.save(path + 'dep_nzero.xlsx')
