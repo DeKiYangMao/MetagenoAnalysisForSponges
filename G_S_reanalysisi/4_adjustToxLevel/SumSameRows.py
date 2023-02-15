@@ -2,8 +2,8 @@
 import xlwt
 import xlrd
 
-filename = 'sha2l_pylum.xlsx'#操作文件名
-path = 'C:\\Users\\AMao\\Desktop\\' #文件所处文件夹的绝对路径
+filename = 'depl_pylum.xlsx'#操作文件名
+path = '' #文件所处文件夹的绝对路径
 f = xlwt.Workbook()
 f_sheet: object = f.add_sheet('sheet1', cell_overwrite_ok=True)
 
